@@ -1,0 +1,196 @@
+body {
+    background-color: rgb(26, 26, 26);
+    /* Color de fondo de toda la página (gris muy oscuro) */
+}
+
+header {
+    background-color: rgb(19, 19, 19);
+    /* Fondo un poco más oscuro que el body */
+    color: rgb(95, 95, 255);
+    /* Color de la fuente principal (azul brillante) */
+    font-family: "bookman old style";
+    /* Tipo de letra para el título y texto del header */
+    text-align: center;
+    /* Centra todo el contenido dentro del header */
+    border: 1px solid rgb(117, 117, 255);
+    /* Borde delgado alrededor del header */
+    padding: 20px;
+    /* Espacio interno entre el borde y el contenido */
+    margin: 20px;
+    /* Espacio externo alrededor del header */
+    border-radius: 10px;
+    /* Redondea las esquinas del borde */
+    box-shadow: 2px 2px 10px rgb(0, 0, 161);
+    /* Añade una sombra azul al header para dar profundidad */
+}
+
+nav {
+    display: flex;
+    /* Activa el modo flexible para alinear elementos fácilmente */
+    justify-content: center;
+    /* Centra los botones horizontalmente */
+    gap: 20px;
+    /* Crea una separación uniforme de 20px entre cada botón */
+    margin-top: 20px;
+    /* Separa el menú del header que tiene arriba */
+}
+
+.nav-btn {
+    display: inline-block;
+    /* Permite que el elemento se comporte como bloque pero en línea */
+    text-decoration: none;
+    /* Quita el subrayado automático de los enlaces <a> */
+    background: linear-gradient(135deg, rgb(95, 95, 255), rgb(0, 0, 161));
+    /* Fondo con degradado de azul a azul oscuro */
+    color: white;
+    /* Color del texto dentro del botón */
+    border: none;
+    /* Elimina el borde por defecto de los elementos */
+    padding: 12px 24px;
+    /* Espacio interno del botón (arriba/abajo - izquierda/derecha) */
+    font-size: 16px;
+    /* Tamaño de la letra */
+    font-family: 'Outfit', sans-serif;
+    /* Tipo de letra moderno para los botones */
+    border-radius: 8px;
+    /* Redondea las esquinas del botón */
+    cursor: pointer;
+    /* Cambia el cursor al ícono de la mano para indicar que es clickeable */
+    transition: transform 0.2s, box-shadow 0.2s;
+    /* Hace que los cambios de tamaño y sombra sean suaves */
+    box-shadow: 0 4px 15px rgba(0, 0, 255, 0.3);
+    /* Sombra suave para que el botón parezca flotar */
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    /* Eleva el botón 3 píxeles cuando el mouse está encima */
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 0.5);
+    /* Aumenta la sombra al elevarse */
+    background: linear-gradient(135deg, rgb(120, 120, 255), rgb(20, 20, 180));
+    /* Brillo sutil en el degradado al pasar el mouse */
+}
+
+.nav-btn:active {
+    transform: translateY(1px);
+    /* Baja el botón un poquito al momento de hacer click (feedback de presionado) */
+}
+
+.section-title {
+    color: white;
+    /* Color blanco para los títulos de sección */
+    text-align: center;
+    /* Centra el texto del título */
+    font-family: "bookman old style";
+    /* Tipografía clásica para contraste */
+    margin-top: 50px;
+    /* Espacio arriba del título para separarlo de la sección anterior */
+    margin-bottom: 30px;
+    /* Espacio debajo del título */
+    font-size: 2.5rem;
+    /* Tamaño de letra grande (2.5 veces el tamaño base) */
+    text-transform: uppercase;
+    /* Convierte todo el texto a MAYÚSCULAS */
+    letter-spacing: 2px;
+    /* Separa las letras entre sí para mayor elegancia */
+}
+
+.projects-grid {
+    display: grid;
+    /* Activa el modo cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Crea columnas que se ajustan solas según el espacio */
+    gap: 30px;
+    /* Espacio de 30px entre las tarjetas de proyectos */
+    padding: 20px;
+    /* Espacio interno del contenedor grid */
+    max-width: 1200px;
+    /* Ancho máximo para que el contenido no se estire demasiado en pantallas gigantes */
+    margin: 0 auto;
+    /* Centra todo el bloque del grid en la página */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    /* Fondo blanco casi transparente (efecto cristal) */
+    border: 1px solid rgba(117, 117, 255, 0.3);
+    /* Borde azul muy sutil */
+    border-radius: 15px;
+    /* Esquinas muy redondeadas para las tarjetas */
+    overflow: hidden;
+    /* Asegura que las imágenes no se salgan de las esquinas redondeadas */
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    /* Transición suave para el movimiento y color */
+    backdrop-filter: blur(5px);
+    /* Efecto de desenfoque detrás de la tarjeta (glassmorphism) */
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    /* Sube la tarjeta 10px al pasar el mouse */
+    border-color: rgb(117, 117, 255);
+    /* El borde se vuelve más brillante al resaltar la tarjeta */
+    background: rgba(255, 255, 255, 0.08);
+    /* Fondo ligeramente más claro al hover */
+}
+
+.project-image {
+    width: 100%;
+    /* La imagen ocupa todo el ancho de la tarjeta */
+    height: 200px;
+    /* Altura fija para todas las imágenes de proyectos */
+    object-fit: cover;
+    /* Recorta la imagen para que llene el espacio sin deformarse */
+    border-bottom: 1px solid rgba(117, 117, 255, 0.3);
+    /* Línea divisoria entre imagen y texto */
+}
+
+.project-info {
+    padding: 20px;
+    /* Espacio interno para que el texto no toque los bordes de la tarjeta */
+}
+
+.project-info h3 {
+    color: rgb(117, 117, 255);
+    /* Color azul para los nombres de los proyectos */
+    font-family: 'Outfit', sans-serif;
+    /* Tipografía moderna para los títulos internos */
+    margin-bottom: 15px;
+    /* Espacio debajo del título del proyecto */
+}
+
+.project-info p {
+    text-align: left;
+    /* Alinea la descripción hacia la izquierda para mayor legibilidad */
+    font-size: 16px;
+    /* Tamaño de letra de la descripción */
+    margin-bottom: 5px;
+    /* Espacio mínimo debajo del párrafo */
+    color: rgba(255, 255, 255, 0.8);
+    /* Blanco suavizado para el texto secundario */
+}
+
+.project-info a {
+    color: rgb(117, 117, 255);
+    /* Color azul para los enlaces dentro de los proyectos */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    font-weight: bold;
+    /* Hace el texto del enlace más grueso */
+    transition: color 0.3s;
+    /* Transición suave al cambiar de color */
+}
+
+.project-info a:hover {
+    color: rgb(255, 255, 255);
+    /* El enlace se vuelve blanco puro al pasar el mouse */
+}
+
+#contacto {
+    text-align: center;
+    /* Centra el contenido de la sección de contacto */
+    padding: 50px 20px;
+    /* Espacio vertical grande para separar del contenido anterior */
+    color: white;
+    /* Color de texto blanco */
+}

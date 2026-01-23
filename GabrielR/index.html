@@ -1,0 +1,71 @@
+<!DOCTYPE html> <!-- Define que este documento es un archivo HTML5 -->
+<html lang="en"> <!-- Etiqueta raíz del documento, 'lang' define el idioma principal (inglés) -->
+
+<head> <!-- Contiene metadatos e información que no se ve directamente en la página -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres para que se vean bien tildes y ñ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsiva (se vea bien en móviles) -->
+    <title>PortafolioGabrielRondon</title> <!-- Título que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Conecta el archivo de estilos CSS con este HTML -->
+</head>
+
+<body> <!-- Contiene todo el contenido visible de la página -->
+    <header> <!-- Define la cabecera del sitio o de una sección -->
+        <h1 id="inicio">Portafolio de Gabriel Rondon</h1>
+        <!-- 'h1' es el título principal, 'id' es un identificador único para enlaces internos -->
+        <p>Soy estudiante de programación con interés en el desarrollo de soluciones tecnológicas prácticas. He
+            trabajado en dos proyectos, incluyendo uno de robótica, donde participé en la programación y configuración
+            de componentes para automatizar tareas específicas. Me gusta aprender haciendo proyectos y quiero seguir
+            mejorando mis habilidades en programación y robótica para aplicarlas en futuros trabajos académicos y
+            oportunidades profesionales</p> <!-- 'p' se usa para párrafos de texto -->
+    </header>
+
+    <nav> <!-- Define una sección de navegación (menú) -->
+        <a class="nav-btn" href="#inicio">Inicio</a>
+        <!-- 'a' crea enlaces, 'class' permite darle estilo en CSS, 'href' dice a dónde va el enlace -->
+        <a class="nav-btn" href="#proyectos">Proyectos</a>
+        <a class="nav-btn" href="#contacto">Contacto</a>
+    </nav>
+
+    <main> <!-- Define el contenido principal y más importante de la página -->
+        <section id="proyectos">
+            <!-- 'section' agrupa contenido relacionado, 'id' permite navegar hasta aquí desde el menú -->
+            <h2 class="section-title">Mis Proyectos</h2> <!-- 'h2' es un título de segundo nivel -->
+            <div class="projects-grid">
+                <!-- 'div' es un contenedor genérico, 'class' agrupa elementos para darles estilo grid -->
+
+                <article class="project-card">
+                    <!-- 'article' representa contenido independiente (como una tarjeta de proyecto) -->
+                    <img src="Imagenes/robotica.png" alt="bombocla" class="project-image">
+                    <!-- 'img' muestra imágenes, 'src' es la ruta, 'alt' es el texto alternativo -->
+                    <div class="project-info"> <!-- Contenedor para la información textual del proyecto -->
+                        <h3>Proyecto de Robótica</h3> <!-- Título de tercer nivel -->
+                        <p>Programación y configuracion de un baston inteligente para personas invidentes, desarrollado
+                            con ayuda de los integrantes de STB academy, esto con la finalidad de cumplir con mi
+                            proyecto de tesis en el instituto educacional arcoiris</p>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <img src="Imagenes/web.png" alt="esacosa" class="project-image">
+                    <div class="project-info">
+                        <h3>Desarrollo Web</h3>
+                        <p>Actualmente estoy aprendiendo desarrollo web, con el objetivo de mejorar mis habilidades en
+                            programación y robótica para aplicarlas en futuros trabajos académicos y oportunidades
+                            profesionales con los profesores de STB academy, el curso completo aqui: <a
+                                href="https://stb-academy.com/">STB Academy</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <p>¿Tienes alguna propuesta o quieres charlar? ¡Escríbeme!</p>
+        </section>
+    </main>
+
+    <footer></footer> <!-- Define el pie de página del sitio -->
+</body>
+
+</html>
