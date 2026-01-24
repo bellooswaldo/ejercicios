@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(181, 154, 255);">
+    <template id="template" style=" background-color: aqua;">
+        <header>
+            <h1
+                style="color: rgb(57, 0, 215); font-size: 50px; text-align: center; border: 2px solid rgb(57, 0, 215); font-family: broadway;">
+                <slot name="titulo">Titulo por Defecto</slot>
+            </h1>
+        </header>
+        <main>
+            <h2 style="color: rgb(57, 0, 215); font-size: 30px; text-align: left; font-family: broadway;">
+                <slot name="subtitulo">Subtitutlo por Defecto</slot>
+            </h2>
+            <p>
+                <slot name="descripcion"
+                    style="color: rgb(29, 0, 108); font-size: 15px; text-align: left; font-family: broadway;">
+                    Descripción por defecto del componente.</slot>
+            </p>
+            <br><br>
+            <p style="color: rgb(29, 0, 108); font-size: 15px; text-align: left; font-family: broadway;">
+                <slot name="footer-text">Si desea mas informacion, pulsa</slot>
+                <a href="https://developer.mozilla.org/es/docs/Web/API/Web_components">aqui</a>
+            </p>
+        </main>
+        <footer>
+            <a href="mailto:gabrlrond2008@gmail.com"
+                style="color: rgb(29, 0, 108); font-size: 15px; text-align: left; font-family: broadway;">Contactate
+                conmigo</a>
+        </footer>
+    </template>
+    <script>
+        class webcomponent extends HTMLElement {
+            constructor() {
+                super();
+                this.attachShadow({ mode: 'open' });
+                const template = document.getElementById("template");
+                this.shadowRoot.appendChild(template.content.cloneNode(true));
+            }
+        }
+        customElements.define('web-component', webcomponent);
+    </script>
+    <web-component>
+        <span slot="titulo">Componente #1</span>
+        <span slot="subtitulo">Personalización Total</span>
+        <span slot="descripcion">Aquí hemos cambiado todo el texto usando slots.</span>
+    </web-component>
+
+    <hr>
+
+    <web-component>
+        <span slot="titulo">Componente #2 (Solo Título)</span>
+    </web-component>
+
+    <hr>
+
+    <web-component>
+        <span slot="titulo">Componente #3</span>
+        <span slot="subtitulo">Flexibilidad</span>
+        <span slot="descripcion">Los Web Components permiten reutilizar estructura pero cambiar el contenido
+            fácilmente.</span>
+    </web-component>
+
+</body>
+
+</html>

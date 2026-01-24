@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Visual de Semántica HTML</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        /* HEADER: Gris azulado */
+        header {
+            border: 3px solid #78909c;
+            /* Borde visible */
+            background-color: #eceff1;
+            /* Fondo suave */
+            padding: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            /* Para poner la etiqueta visual */
+        }
+
+        /* Etiqueta visual para header */
+        header::before {
+            content: "<header>";
+            color: #546e7a;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* NAV: Azul */
+        nav {
+            border: 3px solid #42a5f5;
+            background-color: #e3f2fd;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        nav::before {
+            content: "<nav>";
+            color: #1e88e5;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* MAIN: Rojo suave (importancia) */
+        main {
+            border: 3px solid #ef5350;
+            background-color: #ffebee;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        main::before {
+            content: "<main>";
+            color: #e53935;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* SEASON: Verde */
+        section {
+            border: 3px solid #66bb6a;
+            background-color: #e8f5e9;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        section::before {
+            content: "<section>";
+            color: #43a047;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* ARTICLE: Naranja */
+        article {
+            border: 3px solid #ffa726;
+            background-color: #fff3e0;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        article::before {
+            content: "<article>";
+            color: #fb8c00;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* ASIDE: Morado */
+        aside {
+            border: 3px solid #ab47bc;
+            background-color: #f3e5f5;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        aside::before {
+            content: "<aside>";
+            color: #8e24aa;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* FOOTER: Gris oscuro */
+        footer {
+            border: 3px solid #424242;
+            background-color: #eeeeee;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer::before {
+            content: "<footer>";
+            color: #212121;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER: 
+         Semántica: Representa la cabecera de la página o de una sección.
+         Por qué aquí: Porque contiene el título principal del sitio y la navegación global.
+    -->
+    <header>
+        <h1>Mi Sitio Web Semántico</h1>
+        <p>Aprendiendo HTML5 Estructurado</p>
+
+        <!-- NAV:
+             Semántica: Sección destinada a enlaces de navegación.
+             Por qué aquí: Para agrupar los links principales del sitio (Inicio, Sobre mi, etc).
+        -->
+        <nav>
+            <a href="#">Inicio</a> |
+            <a href="#">Artículos</a> |
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- MAIN:
+         Semántica: Contenido principal y distintivo del documento. Debe ser único en la página.
+         Por qué aquí: Envuelve todo el contenido central que el usuario vino a leer/ver.
+    -->
+    <main>
+
+        <!-- SECTION:
+             Semántica: Representa una sección genérica de contenido agrupado temáticamente (con un título).
+             Por qué aquí: Agrupa la introducción o bienvenida, separándola de los artículos.
+        -->
+        <section>
+            <h2>Introducción a la Semántica</h2>
+            <p>La semántica permite a los navegadores y buscadores entender qué parte es qué.</p>
+        </section>
+
+        <!-- ARTICLE:
+             Semántica: Contenido independiente y distribuible por sí mismo (como un post de blog o noticia).
+             Por qué aquí: Esta información sobre "Etiquetas" tiene sentido por sí sola, incluso fuera de esta página.
+        -->
+        <article>
+            <h2>Artículo: Importancia de las Etiquetas</h2>
+            <p>Usar etiquetas correctas mejora el SEO y la accesibilidad.</p>
+            <p>Este bloque naranja es un artículo completo.</p>
+        </article>
+
+        <!-- ASIDE:
+             Semántica: Contenido relacionado tangencialmente con el contenido que lo rodea (como barras laterales).
+             Por qué aquí: Ofrece información extra (datos curiosos) que no es parte del flujo principal pero ayuda.
+        -->
+        <aside>
+            <h3>¿Sabías que...?</h3>
+            <p>El elemento <code>&lt;div&gt;</code> no tiene significado semántico, solo sirve para agrupar.</p>
+        </aside>
+
+    </main>
+
+    <!-- FOOTER:
+         Semántica: Pie de página de la sección o documento.
+         Por qué aquí: Contiene información de cierre, copyright y autoría que cierra la estructura.
+    -->
+    <footer>
+        <p>&copy; 2026 Tutorial de HTML. Creado para aprender.</p>
+    </footer>
+
+</body>
+
+</html>

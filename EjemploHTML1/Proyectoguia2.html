@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Correo</title>
+</head>
+
+<body>
+    <form>
+        <label for="correo">Indique su correo de gmail o outlook:</label>
+        <br>
+        <input type="email" id="correo" pattern="^[a-z0-9]{5,12}@(gmail|outlook)\.com$"
+            title="Debe tener entre 5 y 12 caracteres seguidos de @gmail.com o @outlook.com"
+            placeholder="ejemplo@gmail.com" required>
+
+        <button type="submit">Validar</button>
+    </form>
+</body>
+
+</html>

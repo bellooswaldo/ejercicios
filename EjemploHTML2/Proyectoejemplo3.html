@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de HTML Semántico</title>
+</head>
+
+<body>
+    <!-- HEADER: Contiene el encabezado de la página o sección -->
+    <header>
+        <hgroup>
+            <h1 id="titulo">Titulo de ejempllo</h1>
+            <h2>Subtitulo de ejemplo</h2>
+        </hgroup>
+
+        <!-- NAV: Define un conjunto de enlaces de navegación -->
+        <nav>
+            <a href="#titulo" title="esto te lleva a el titulo principal">Ir al título principal</a>
+        </nav>
+    </header>
+
+    <!-- MAIN: Contenido principal y único del documento -->
+    <main>
+        <!-- SECTION: Agrupa contenido relacionado temáticamente -->
+        <section>
+            <h2>Diferencia entre un título normal y un hgroup</h2>
+            <p>El <code>&lt;hgroup&gt;</code> se usa para agrupar un título con su subtítulo relacionado.</p>
+        </section>
+
+        <!-- ARTICLE: Contenido independiente y autónomo (se puede distribuir por sí solo) -->
+        <article>
+            <h2>Ejemplos de Formato de Texto</h2>
+            <p><strong>mundo es una forma de saludarte fuerte</strong> (negrita semántica)</p>
+            <p><em>mundo es una forma de saludarte en cursiva</em> (énfasis semántico)</p>
+            <p><mark>mundo es una forma de saludarte en resaltado</mark> (marcado de relevancia)</p>
+            <p><small>mundo es una forma de saludarte en pequeño</small> (comentarios secundarios)</p>
+            <p>mundo es una forma de saludarte en grande (texto normal)</p>
+        </article>
+
+        <!-- ASIDE: Contenido tangencial o relacionado de forma indirecta (como barras laterales) -->
+        <aside>
+            <h3>Elementos de Contenedor (Div y Span)</h3>
+            <div>
+                Esto es un <code>&lt;div&gt;</code>: un contenedor de bloque genérico. Divide el texto y hace que lo
+                siguiente baje (salto de línea automático).
+            </div>
+            <br>
+            <span style="color: aqua;">Ejemplo de span</span>
+            <span style="color: blue;"> usado para </span>
+            <span style="color: red;"> estilo en línea.</span>
+            <p><small>Nota: <code>&lt;span&gt;</code> es un contenedor genérico de línea (inline).</small></p>
+        </aside>
+    </main>
+
+    <!-- FOOTER: Pie de página con autoría, contacto o enlaces legales -->
+    <footer>
+        <p>&copy; 2026 Ejemplo de Aprendizaje Semántico - Gabriel</p>
+    </footer>
+</body>
+
+</html>

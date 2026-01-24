@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Este escrito (DOCTYPE html) es la manera en que el servidor o la compu reconoce que este codigo esta en html 5-->
+<html> <!-- todo lo que esta entre html y /html es el codigo de la ventana-->
+
+<head> <!-- todo lo que esta entre head y /head es el codigo del encabezado-->
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <title>chamba suprema</title> <!-- el title es el nombre que aparece en la pestaña del navegador-->
+</head>
+
+<body> <!-- todo lo que esta entre body y /body es el codigo del cuerpo-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>producto</th>
+                <th>precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>arroz</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>cerdo feliz</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>cerdo feliz muy feliz</td>
+                <td>400</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>total</td>
+                <td>700</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- ul es lista no ordenada-->
+    <ul>
+        <li>elemento 1</li>
+        <li>elemento 2</li>
+        <li>elemento 3</li>
+        <li>elemento 4</li>
+    </ul>
+
+    <!-- ol es lista ordenada-->\
+    <ol>
+        <li>elemento 1</li>
+        <li>elemento 2</li>
+        <li>elemento 3</li>
+        <li>elemento 4</li>
+    </ol>
+
+    <ol>
+        <li value="50">elemento 1</li>
+        <li>elemento 2</li>
+        <li>elemento 3</li>
+        <li>elemento 4</li>
+    </ol>
+
+    <ol>
+        <li>
+            <ol>
+                <li style="list-style-type: lower-alpha;">elemento 1</li>
+                <li style="list-style-type: lower-alpha;">elemento 2</li>
+                <li style="list-style-type: lower-alpha;">elemento 3</li>
+                <li style="list-style-type: lower-alpha;">elemento 4</li>
+            </ol>
+
+        </li>
+
+    </ol>
+
+
+
+
+
+
+    <form action="/formulario" method="post">
+        <label for="nombre"> Nombre </label>
+        <input value="name" type="text" id="nombre" name="nombre" placeholder="Marco" />
+        <br>
+        <label for="apellido">apellido</label>
+        <input value="namers" type="text" id="apellido" name="apellido" placeholder="polo" />
+        <br>
+        <label for="terminos">Terminos y condiciones</label>
+        <input type="checkbox" id="terminos" name="terminos" />
+        <br>
+        <input type="radio" id="genero" name="genero" />
+        <label for="genero">Masculino</label>
+        <br>
+        <input type="radio" id="genero" name="genero" />
+        <label for="genero">Femenino</label>
+        <br>
+        <label for="gmail">Gmail</label>
+        <input type="email" id="gmail" name="gmail" placeholder="ejemplo@gmail.com" />
+        <br>
+        <label for="clave">Clave</label>
+        <input type="password" id="clave" name="clave" placeholder="clave" />
+        <br>
+        <label for="comentario">Comentario</label>
+        <textarea rows="10" cols="50" name="comentario" id="comentario"
+            placeholder="este sitio es mas chafa que cagar parado"> eres una looocaaa</textarea>
+        <br>
+        <!--input type="submit" /> -->
+        <button type="button"><img src="descarga.jpg" alt="400" width="400"> boton imagen, es un ejemplo que se puede
+            hacer con el tipo button </button>
+        <button type="button"> el tipo boton mas personalizable</button><br>
+        <button type="reset">Borrar</button><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <h1>Mi primer heading</h1> <!-- los headings son los titulos y solo hay 6 tipos y van de forma descendente-->
+    <h2>Mi segundo heading</h2>
+    <h3>Mi tercer heading</h3>
+    <h4>Mi cuarto heading</h4>
+    <h5>Mi quinto heading</h5>
+    <h6>Mi sexto heading</h6>
+
+    <p>Chanchito feliz esta muy feliz</p> <!-- los parrafos son los textos que aparecen en la ventana-->
+    <p>Chanchito triste esta muy triste</p>
+    <hr> <!-- el hr es una linea horizontal-->
+    <h2>Chanchito felipe</h2>
+
+    <p>esto es un <span style="color: blue">texto más largo</span> para demostrar como se ve el <br><br>
+        span! en accion</p>
+    <!-- el codigo "span" es para darle estilos a un texto como lo puede ser cambiarle el color-->
+    <!-- este texto no aparecera en el navegador-->
+    <a target="_blank" href="https://google.com">ir a Google</a> <br><br>
+    <!-- el codigo "a" es para crear un enlace, el comando target despues de a y que pone _blank es para que en ves de recargar tu misma pagina se abra una nueva ventana, y href es donde se coloca la direccion del enlace-->
+    <img src="descarga.jpg" width="400" />
+    <!-- es codigo img es para mostrar una imagen, esta se puede hacer de dos formas, con un link directo a la img en internet o una que seria la img en local, tmbien a estas se les puede cambiar el tamaño, tantoel largo como el ancho con comandos especificos siendo estos width y height-->
+
+
+</body>
+
+</html>
