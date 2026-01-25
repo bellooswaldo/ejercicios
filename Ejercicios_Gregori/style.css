@@ -21,7 +21,8 @@ img { margin-left: 20px;
     margin-top: 20px;
 
 }
-body { background-color: rgb(81, 163, 134);
+body { background: #118abb;
+    background: linear-gradient(90deg, rgb(42, 155, 144) 0%, rgb(140, 230, 212) 5%, rgba(87, 199, 133, 1) 50%, rgba(51, 124, 202, 0) 68%, rgb(40, 185, 218) 100%);;
     margin: auto;
     display: block;
     font-family: roboto;
@@ -30,6 +31,7 @@ body { background-color: rgb(81, 163, 134);
     max-width: 800px;
     padding: 20px;
 }
+
 h2 { margin-top: 40px;
 
 }
