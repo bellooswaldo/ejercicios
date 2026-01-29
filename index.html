@@ -3,17 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Mi Portafolio Profesional</title>
-    <style>
-        :root {
-            --primary: #1a2a6c;
-            --secondary: #b21f1f;
-            --accent: #fdbb2d;
-            --bg: #f4f7f6;
-            --white: #ffffff;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 
@@ -26,62 +17,64 @@
     </header>
 
     <div class="container">
-        <section>
+        <section class="seccion-perfil">
             <h2>Sobre Mí</h2>
-            <p>Hola, soy un profesional enfocado en desarrollo  web. Me gusta crear proyectos que impacten y siempre estoy en constante aprendizaje.</p>
+            <p>Soy un desarrollado wweb, que le apasiona crear, imaginar y hacer por los demás.</p>
         </section>
 
-        <section>
+        <section class="seccion-contacto">
+            <h2>Contacto Directo</h2>
+            <p><strong>Email:</strong> denisramirez.dj@gmail.com</p>
+            <p><strong>Ubicación:</strong> Caracas, Venezuela</p>
+        </section>
+
+        <section class="seccion-social">
             <h2>Mis Redes Sociales</h2>
             <div class="social-links">
-                <a href="linkedin.com/in/denis-ramirez-franco-6a499b185" target="_blank" class="btn-social linkedin">LinkedIn</a>
+                <a href="https://linkedin.com/in/denis-ramirez-franco-6a499b185" target="_blank" class="btn-social linkedin">LinkedIn</a>
                 <a href="https://github.com/denisjrf" target="_blank" class="btn-social github">GitHub</a>
                 <a href="https://instagram.com/denis_fr" target="_blank" class="btn-social instagram">Instagram</a>
                 <a href="https://twitter.com/denis_fr" target="_blank" class="btn-social twitter">X / Twitter</a>
             </div>
         </section>
 
-        <section>
-            <h2>Contacto Directo</h2>
-            <p><strong>Email:</strong> denisramirez.dj@gmail.com</p>
-            <p><strong>Ubicación:</strong> Caracas, Venezuela</p>
-        </section>
-
-        <section>
+        <section class="seccion-proyectos">
             <h2>Proyectos</h2>
-            <div class="proyecto">
-                <h3>Proyecto Mercado Libre</h3>
-                <p>Apis para ofrecer envíos gratis por medio del mercado libre y la impresión de etiqueta Térmica en ZPL en formato PDF, que le pegan al envío.</p>
-            </div>
-            <div class="proyecto">
-                <h3>Proyecto Tarifas Nacionales</h3>
-                <p>Módulo para actualizar tarifas diarias según la tasa BCV.</p>
-            </div>
+            <div class="grid-proyectos">
+                <div class="proyecto">
+                    <h3>Proyecto Mercado Libre</h3>
+                    <p>Desarrollo de Servicios Web para Mercado Libre.</p>
+                </div>
+                <div class="proyecto">
+                    <h3>Proyecto Tarifas Nacionales</h3>
+                    <p>Módulo de Calculo de tarifas nacionales..</p>
+                </div>
+            </div>g
         </section>
 
-        <section>
-            <h2>Registro y Mensajería</h2>
+        <section class="seccion-formulario">
+            <h2>Registro</h2>
             <form action="#" method="POST">
                 <div class="campo">
-                    <label for="nombre">Nombre Completo:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+                    <label for="nombre-form">Nombre Completo:</label>
+                    <input type="text" id="nombre-form" name="nombre" placeholder="Ej: Juan Pérez" required>
                 </div>
 
                 <div class="campo">
-                    <label for="rif">Rif Alumno (Formato V-12345678-0):</label>
+                    <label for="rif">RIF Alumno (Formato J-12345678-9):</label>
                     <input type="text" id="rif" name="rif" 
-                           class="input-especial"
+                           class=""
                            pattern="^[JVEG]-[0-9]{8}-[0-9]$" 
-                           title="Formato incorrecto. Ejemplo válido: V-12345678-0" 
-                           placeholder="V-12345678-0" required>
+                           title="Formato incorrecto. Ejemplo válido: J-12345678-9" 
+                           placeholder="J-00000000-0" required>
                 </div>
 
                 <div class="campo">
                     <label for="telefono">WhatsApp / Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono" 
-                           placeholder="584241234567" 
+                           placeholder="+584241234567" 
                            pattern="\+[0-9]{1,3}[0-9]{7,10}" 
-                           title="Debe incluir + código de país." required>
+                           title="Debe incluir + y código de país." required>
                 </div>
 
                 <div class="campo">
