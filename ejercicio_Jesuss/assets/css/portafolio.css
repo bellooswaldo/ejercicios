@@ -1,0 +1,372 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* estilo principal del cuerpo */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background-image: url(/assets/img/fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment:  fixed;
+}
+
+header {
+  background: #303030;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  background: linear-gradient(to right, #51ff00 30%, #ff5e00, #ff4d00);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5em;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+nav {
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.barra a {
+  position: relative;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+}
+
+/*Estilos para el efecto de línea debajo del enlace*/
+.barra a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2em;
+  width: 100%;
+  height: 3px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+/*Estilos para el efecto de línea debajo del enlace al pasar el ratón*/
+.barra a:hover::after {
+  bottom: -3px;
+  transform-origin: left;
+  transform: scaleX(1);
+}
+/*Estilos para el efecto de línea encima del enlace*/
+.barra a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+/*Estilos para el efecto de línea encima del enlace al pasar el ratón*/
+.barra a:hover::before {
+  top: -3px;
+  transform-origin: right;
+  transform: scaleX(1);
+}
+
+/*Estilos para el color al pasar el ratón por encima del enlace*/
+.barra a:hover,
+.barra a.active {
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+#jesus {
+  float: left;
+  margin-top: 30px;
+  margin-right: 2rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding-top: 5px;
+  animation-name: facephote;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-direction: alternate; /* ida y vuelta */
+  animation-timing-function: ease-in-out;
+}
+@keyframes facephote {
+  from {
+    transform: translateX(100px);
+    opacity: 0; /* visible al inicio */
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1; /* se desvanece al final */
+  }
+}
+
+.descrione {
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+.descrione h2 {
+  text-align: center;
+  margin: 0;
+  padding: 0.5rem;
+  background: #4b4b4b;
+}
+/* estilo para las titulos*/
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+h4 {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 20px;
+}
+h5 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.work {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.work-item {
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #4b4b4b;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+  filter: brightness(1);
+}
+
+.work img:hover {
+  filter: brightness(1.2);
+}
+
+.work img:not(:hover) {
+  filter: brightness(0.5);
+  transform: scale(0.95);
+}
+
+.work-item h3 {
+  margin: 0;
+  padding: 1rem;
+  background: #4b4b4b;
+}
+
+.work-item p {
+  padding: 0 1rem 1rem;
+}
+/* pie de pagina */
+footer {
+  text-align: center;
+  margin: 50px 0 30px 0;
+  padding: 1rem;
+  background: #3e3e3e;
+  color: #fff;
+}
+/* escala para los p en el pie de pagina*/
+footer p {
+  padding: 0;
+  margin: 0;
+}
+/* Estilos para pantallas */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  .barra a {
+    margin: 0.5rem 0;
+  }
+
+  #jesus {
+    margin: 1rem auto;
+    float: none;
+    max-width: 200px;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+/* Estilos para pantallas */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .work-item img {
+    height: 150px;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
+/* ===========================
+   INSIGNIAS (BADGES)
+=========================== */
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+  color: white;
+}
+
+.badge {
+  background: linear-gradient(45deg, #1a1a1a, #333333);
+  padding: 10px 14px 6px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.badge:hover {
+  transform: scale(1.08);
+}
+
+/* ===========================
+   REDES SOCIALES
+=========================== */
+.descrione a {
+  display: inline-block;
+  color: #51ff00;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 6px;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.descrione a:hover {
+  color: #ff5e00;
+  transform: translateX(4px);
+}
+
+/* ===========================
+   FORMULARIO DE CONTACTO
+=========================== */
+#contact form {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+#contact label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#contact input,
+#contact select,
+#contact textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #2b2b2b;
+  color: white;
+  transition: 0.3s ease;
+}
+
+#contact input:focus,
+#contact select:focus,
+#contact textarea:focus {
+  border: 2px solid #ff5e00;
+  background: #1f1f1f;
+}
+
+/* ===========================
+   BOTÓN FORMULARIO
+=========================== */
+#contact button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #51ff00, #ff5e00);
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#contact button:hover {
+  transform: scale(1.03);
+  background: linear-gradient(45deg, #ff5e00, #ff0000);
+  color: white;
+}
+
+/* ===========================
+   RESPONSIVE FORMULARIO
+=========================== */
+@media (max-width: 768px) {
+  #contact form {
+    padding: 15px;
+  }
+}
