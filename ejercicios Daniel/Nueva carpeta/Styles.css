@@ -1,0 +1,39 @@
+
+
+    /* Estilo base (para pantallas grandes/escritorio) */
+.contenedor-flexible {
+  width: 80%;
+  height: 200px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: background-color 0.4s ease; /* Para que el cambio sea suave */
+  
+  background-color: #2c3e50; /* Color por defecto: Azul oscuro */
+}
+
+/* Cuando la pantalla mide menos de 1024px (Tablets) */
+@media (max-width: 1024px) {
+  .contenedor-flexible {
+    background-color: #27ae60; /* Verde */
+  }
+}
+
+/* Cuando la pantalla mide menos de 768px (Móviles en horizontal) */
+@media (max-width: 768px) {
+  .contenedor-flexible {
+    background-color: #e67e22; /* Naranja */
+  }
+}
+
+/* Cuando la pantalla mide menos de 480px (Móviles en vertical) */
+@media (max-width: 480px) {
+  .contenedor-flexible {
+    background-color: #c0392b; /* Rojo */
+  }
+}
