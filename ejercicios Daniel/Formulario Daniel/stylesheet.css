@@ -1,0 +1,5 @@
+body{ background-color: blueviolet;
+    background: linear-gradient(to right, blueviolet, purple);
+    font-family: Arial, sans-serif;
+
+}/* Cambié el color de fondo a azul violeta y establecí la fuente a Arial */
