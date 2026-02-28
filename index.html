@@ -4,102 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio Profesional</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+        }
+
+        /* Tipografía normal, limpia y profesional */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+        }
+
+        /* Aseguramos que los títulos tengan buen peso (negrita) pero sin fuentes raras */
+        h1, h2, h3, .navbar-brand, .modal-title, .btn-enviar {
+            font-weight: 700;
+        }
+
+        /* Navbar personalizada con tu color primario */
+        .navbar-custom {
+            background-color: var(--primary);
+        }
+
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+            color: white;
+            padding: 60px 0 100px 0;
+            text-align: center;
+        }
+
+        #nombre {
+            font-style: italic;
+            margin-top: 15px;
+        }
+
+        .main-container {
+            margin-top: -60px;
+            margin-bottom: 50px;
+        }
+
+        .card-custom {
+            background: white;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+        }
+
+        .imagen-portafolio {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .seccion-titulo {
+            color: var(--primary);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-social {
+            color: white !important;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .btn-social:hover { transform: translateY(-3px); opacity: 0.9; }
+        .linkedin { background-color: #0077b5; }
+        .github { background-color: #333; }
+        .instagram { background-color: #e4405f; }
+        .twitter { background-color: #1da1f2; }
+
+        .proyecto-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid var(--accent);
+            border-radius: 0 8px 8px 0;
+            height: 100%;
+        }
+
+        .input-especial {
+            border: 2px solid var(--primary) !important;
+            background-color: #f0f4ff;
+        }
+
+        .btn-enviar {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px;
+            transition: background 0.3s;
+        }
+        .btn-enviar:hover { background-color: var(--secondary); color: white; }
+    </style>
 </head>
 <body>
 
-    <header>
-        <div class="contenedor-imagen">
-            <img src="imagenes/denis.jpg" alt="Foto de perfil" class="imagen-portafolio">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Denis R.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavegacion">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre-mi">Sobre Mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#proyectos">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#registro">Registro</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <h1 id="nombre">Denis Ramirez</h1>
-        <p>Ingeniero de Sistemas</p>
+    </nav>
+
+    <header>
+        <div class="container">
+            <img src="imagenes/denis.jpg" alt="Foto de perfil" class="imagen-portafolio">
+            <h1 id="nombre">Denis Ramirez</h1>
+            <p class="lead">Ingeniero de Sistemas</p>
+        </div>
     </header>
 
-    <div class="container">
-        <section class="seccion-perfil">
-            <h2>Sobre Mí</h2>
-            <p>Soy un desarrollado wweb, que le apasiona crear, imaginar y hacer por los demás.</p>
-        </section>
+    <div class="container main-container">
+        <div class="card-custom">
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <section id="sobre-mi" class="seccion-perfil">
+                        <h2 class="seccion-titulo">Sobre Mí</h2>
+                        <p>Soy un desarrollado web, que le apasiona crear, imaginar y hacer por los demás.</p>
+                    </section>
+                </div>
 
-        <section class="seccion-contacto">
-            <h2>Contacto Directo</h2>
-            <p><strong>Email:</strong> denisramirez.dj@gmail.com</p>
-            <p><strong>Ubicación:</strong> Caracas, Venezuela</p>
-        </section>
+                <div class="col-md-6">
+                    <section class="seccion-contacto">
+                        <h2 class="seccion-titulo">Contacto Directo</h2>
+                        <p><strong>Email:</strong> denisramirez.dj@gmail.com</p>
+                        <p><strong>Ubicación:</strong> Caracas, Venezuela</p>
+                    </section>
+                </div>
 
-        <section class="seccion-social">
-            <h2>Mis Redes Sociales</h2>
-            <div class="social-links">
-                <a href="https://linkedin.com/in/denis-ramirez-franco-6a499b185" target="_blank" class="btn-social linkedin">LinkedIn</a>
-                <a href="https://github.com/denisjrf" target="_blank" class="btn-social github">GitHub</a>
-                <a href="https://instagram.com/denis_fr" target="_blank" class="btn-social instagram">Instagram</a>
-                <a href="https://twitter.com/denis_fr" target="_blank" class="btn-social twitter">X / Twitter</a>
+                <div class="col-12">
+                    <section class="seccion-social">
+                        <h2 class="seccion-titulo">Mis Redes Sociales</h2>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="https://linkedin.com/in/denis-ramirez-franco-6a499b185" target="_blank" class="btn btn-social linkedin">LinkedIn</a>
+                            <a href="https://github.com/denisjrf" target="_blank" class="btn btn-social github">GitHub</a>
+                            <a href="https://instagram.com/denis_fr" target="_blank" class="btn btn-social instagram">Instagram</a>
+                            <a href="https://twitter.com/denis_fr" target="_blank" class="btn btn-social twitter">X / Twitter</a>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-12">
+                    <section id="proyectos" class="seccion-proyectos">
+                        <h2 class="seccion-titulo">Proyectos</h2>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="proyecto-item">
+                                    <h3>Proyecto Mercado Libre</h3>
+                                    <p>Desarrollo de Servicios Web para Mercado Libre.</p>
+                                    <button type="button" class="btn btn-outline-primary btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalMercadoLibre">
+                                        Ver detalles
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="proyecto-item">
+                                    <h3>Proyecto Tarifas Nacionales</h3>
+                                    <p>Módulo de Calculo de tarifas nacionales.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="col-12">
+                    <section id="registro" class="seccion-formulario">
+                        <h2 class="seccion-titulo">Registro</h2>
+                        <form action="#" method="POST" class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nombre-form" class="form-label fw-bold">Nombre Completo:</label>
+                                <input type="text" id="nombre-form" name="nombre" class="form-control" placeholder="Ej: Juan Pérez" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="rif" class="form-label fw-bold">RIF Alumno (Formato J-12345678-9):</label>
+                                <input type="text" id="rif" name="rif" class="form-control input-especial" 
+                                       pattern="^[JVEG]-[0-9]{8}-[0-9]$" 
+                                       title="Formato incorrecto. Ejemplo válido: J-12345678-9" 
+                                       placeholder="J-00000000-0" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="telefono" class="form-label fw-bold">WhatsApp / Teléfono:</label>
+                                <input type="tel" id="telefono" name="telefono" class="form-control" 
+                                       placeholder="+584241234567" 
+                                       pattern="\+[0-9]{1,3}[0-9]{7,10}" 
+                                       title="Debe incluir + y código de país." required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="asunto" class="form-label fw-bold">Asunto:</label>
+                                <select id="asunto" name="asunto" class="form-select" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="laboral">Propuesta Laboral</option>
+                                    <option value="tecnica">Consulta Técnica</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label fw-bold">Mensaje:</label>
+                                <textarea id="mensaje" name="mensaje" class="form-control" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-enviar w-100 rounded-3">Enviar Formulario</button>
+                            </div>
+                        </form>
+                    </section>
+                </div>
             </div>
-        </section>
 
-        <section class="seccion-proyectos">
-            <h2>Proyectos</h2>
-            <div class="grid-proyectos">
-                <div class="proyecto">
-                    <h3>Proyecto Mercado Libre</h3>
-                    <p>Desarrollo de Servicios Web para Mercado Libre.</p>
-                </div>
-                <div class="proyecto">
-                    <h3>Proyecto Tarifas Nacionales</h3>
-                    <p>Módulo de Calculo de tarifas nacionales..</p>
-                </div>
-            </div>g
-        </section>
-
-        <section class="seccion-formulario">
-            <h2>Registro</h2>
-            <form action="#" method="POST">
-                <div class="campo">
-                    <label for="nombre-form">Nombre Completo:</label>
-                    <input type="text" id="nombre-form" name="nombre" placeholder="Ej: Juan Pérez" required>
-                </div>
-
-                <div class="campo">
-                    <label for="rif">RIF Alumno (Formato J-12345678-9):</label>
-                    <input type="text" id="rif" name="rif" 
-                           class=""
-                           pattern="^[JVEG]-[0-9]{8}-[0-9]$" 
-                           title="Formato incorrecto. Ejemplo válido: J-12345678-9" 
-                           placeholder="J-00000000-0" required>
-                </div>
-
-                <div class="campo">
-                    <label for="telefono">WhatsApp / Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" 
-                           placeholder="+584241234567" 
-                           pattern="\+[0-9]{1,3}[0-9]{7,10}" 
-                           title="Debe incluir + y código de país." required>
-                </div>
-
-                <div class="campo">
-                    <label for="asunto">Asunto:</label>
-                    <select id="asunto" name="asunto" required>
-                        <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="laboral">Propuesta Laboral</option>
-                        <option value="tecnica">Consulta Técnica</option>
-                        <option value="colaboracion">Colaboración</option>
-                    </select>
-                </div>
-
-                <div class="campo">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
-                </div>
-
-                <button type="submit" class="btn-enviar">Enviar Formulario</button>
-            </form>
-        </section>
+        </div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 - Portafolio Profesional</p>
+    <footer class="text-center py-4 bg-white border-top">
+        <p class="mb-0 text-muted">&copy; 2026 - Portafolio Profesional</p>
     </footer>
 
+    <div class="modal fade" id="modalMercadoLibre" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: var(--primary); color: white;">
+                    <h5 class="modal-title" id="modalLabel">Detalles del Proyecto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Aquí puedes agregar más información sobre tu participación en el proyecto de Mercado Libre.</p>
+                    <ul>
+                        <li>Desarrollo de APIs.</li>
+                        <li>Integración de servicios web.</li>
+                        <li>Mantenimiento de bases de datos.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://github.com/denisjrf" target="_blank" class="btn btn-primary" style="background-color: var(--accent); color: #333; border: none; font-weight: bold;">Ver Código</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

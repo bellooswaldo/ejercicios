@@ -1,157 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+<style>
+    /* 1. Variables y Fuentes */
+    @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
 
-        :root {
-            --primary: #1a2a6c;
-            --secondary: #b21f1f;
-            --accent: #fdbb2d;
-            --bg: #f4f7f6;
-            --white: #ffffff;
-        }
+    :root {
+        --primary: #1a2a6c;
+        --secondary: #b21f1f;
+        --accent: #fdbb2d;
+        --bg: #f4f7f6;
+    }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            font-weight: bold;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: #333;
-        }
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: var(--bg);
+        color: #333;
+    }
 
-        header {
-            background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
-            color: var(--white);
-            padding: 3rem 0 5rem 0;
-            text-align: center;
-        }
+    /* Aplica tu fuente a los títulos y botones */
+    h1, h2, h3, .navbar-brand, .modal-title, .btn-enviar {
+        font-family: "Gravitas One", serif;
+    }
 
-        #nombre {
-            font-style: italic;
-        }
-        .container {
-            width: 90%;
-            max-width: 900px;
-            margin: auto;
-            background: var(--white);
-            margin-top: -50px;
-            border-radius: 15px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 50px;
+    /* 2. Navbar y Encabezado Personalizado */
+    .navbar-custom {
+        background-color: var(--primary);
+    }
 
-            display: grid;
-            gap: 25px;
-            grid-template-columns: 1fr 1fr;
-            grid-template-areas: 
-                "perfil contacto"
-                "social social"
-                "proyectos proyectos"
-                "formulario formulario";
-        }
-        .seccion-perfil { grid-area: perfil; }
-        .seccion-contacto { grid-area: contacto; }
-        .seccion-social { grid-area: social; }
-        .seccion-proyectos { grid-area: proyectos; }
-        .seccion-formulario { grid-area: formulario; }
+    header {
+        background: linear-gradient(to right, var(--primary), var(--secondary), var(--accent));
+        color: white;
+        padding: 4rem 0 6rem 0; /* Padding ajustado */
+        text-align: center;
+    }
 
-        .contenedor-imagen {
-            text-align: center;
-            margin-bottom: 15px;
-        }
+    #nombre {
+        font-style: italic;
+        margin-top: 15px;
+    }
 
-        .imagen-portafolio {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid var(--white);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
+    /* 3. Contenedor Principal (Tarjeta Flotante) */
+    .main-container {
+        margin-top: -60px;
+        margin-bottom: 50px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        padding: 40px;
+    }
 
-        h2 {
-            color: var(--primary);
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 30px;
-        }
-        .social-links {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
+    /* 4. Imagen de Perfil */
+    .imagen-portafolio {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
 
-        .btn-social {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: transform 0.3s;
-        }
+    /* 5. Títulos de Secciones */
+    .seccion-titulo {
+        color: var(--primary);
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
 
-        .btn-social:hover { transform: translateY(-3px); opacity: 0.9; }
-        .linkedin { background-color: #0077b5; }
-        .github { background-color: #333; }
-        .instagram { background-color: #e4405f; }
-        .twitter { background-color: #1da1f2; }
+    /* 6. Botones Sociales (Mantienen tu estilo original) */
+    .btn-social {
+        color: white !important;
+        font-weight: bold;
+        transition: transform 0.3s;
+    }
+    .btn-social:hover { transform: translateY(-3px); opacity: 0.9; }
+    .linkedin { background-color: #0077b5; }
+    .github { background-color: #333; }
+    .instagram { background-color: #e4405f; }
+    .twitter { background-color: #1da1f2; }
 
-        .grid-proyectos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
+    /* 7. Proyectos y Formularios */
+    .proyecto-item {
+        background: #f9f9f9;
+        padding: 20px;
+        border-left: 5px solid var(--accent);
+        border-radius: 0 8px 8px 0;
+        height: 100%;
+    }
 
-        .proyecto {
-            background: #f9f9f9;
-            padding: 20px;
-            border-left: 5px solid var(--accent);
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 0;
-        }
-        .campo { margin-bottom: 1.2rem; }
-        label { display: block; font-weight: bold; margin-bottom: 5px; }
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-sizing: border-box;
-            font-family: inherit; /* Para que usen la fuente Gravitas */
-        }
+    .input-especial {
+        border: 2px solid var(--primary) !important;
+        background-color: #f0f4ff;
+    }
 
-        .input-especial {
-            border: 2px solid var(--primary) !important;
-            background-color: #f0f4ff;
-        }
-
-        .btn-enviar {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 8px;
-            width: 100%;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-            font-family: inherit;
-        }
-
-        .btn-enviar:hover { background: var(--secondary); }
-
-        footer { text-align: center; padding: 30px; color: #888; }
-        
-        @media (max-width: 768px) {
-            .container {
-                grid-template-areas: 
-                    "perfil"
-                    "contacto"
-                    "social"
-                    "proyectos"
-                    "formulario";
-                grid-template-columns: 1fr;
-            }
-        }
+    .btn-enviar {
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        padding: 15px;
+        transition: background 0.3s;
+    }
+    .btn-enviar:hover { background-color: var(--secondary); color: white; }
+</style>
