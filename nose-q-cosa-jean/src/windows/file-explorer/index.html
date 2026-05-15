@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Archivador - Explorador de archivos</title>
+  <link rel="stylesheet" href="../../assets/theme.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header h3 {
+      margin: 0;
+      white-space: nowrap;
+      font-size: 14px;
+      font-weight: normal;
+      background: var(--textarea-bg);
+      padding: 8px 12px;
+      border-radius: 4px;
+      border: 1px solid var(--textarea-border);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .search-container input {
+      flex: 1;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .search-container button {
+      padding: 8px 12px;
+      white-space: nowrap;
+    }
+
+    #file-list {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 60px;
+      border: 1px solid var(--item-border);
+      border-radius: 4px;
+      background: var(--item-bg);
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      background: var(--bg-color);
+      border-top: 1px solid var(--item-border);
+      z-index: 100;
+    }
+
+    .menu-button {
+      border: none;
+      padding: 8px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .menu-wrapper {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      display: none;
+      z-index: 1000;
+      margin-bottom: 5px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .dropdown.show {
+      display: block;
+    }
+
+    .dropdown-item {
+      padding: 12px 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 180px;
+      transition: background 0.2s ease;
+    }
+
+    .dropdown-item:hover {
+      background: var(--item-hover-bg);
+    }
+
+    .color-picker-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .color-picker-container input {
+      width: 40px;
+      height: 35px;
+      border: 1px solid var(--textarea-border);
+      border-radius: 4px;
+      cursor: pointer;
+      padding: 2px;
+    }
+
+    .color-picker-container button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    .empty-folder {
+      padding: 40px;
+      text-align: center;
+      color: var(--text-color);
+      opacity: 0.6;
+    }
+
+    .loading {
+      padding: 40px;
+      text-align: center;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--item-border);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-hover);
+    }
+  </style>
+</head>
+<body class="theme-light">
+  <div class="header">
+    <h3 id="current-path">Cargando...</h3>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Buscar archivos o carpetas..." autocomplete="off" />
+      <button id="clear-search-btn" title="Limpiar búsqueda">✕</button>
+    </div>
+  </div>
+  
+  <div id="file-list">
+    <div class="loading">Cargando archivos...</div>
+  </div>
+  
+  <div class="bottom-bar">
+    <div class="menu-wrapper">
+      <button class="menu-button" id="menu-btn">☰</button>
+      <div class="dropdown" id="dropdown-menu">
+        <div class="dropdown-item" id="theme-option">
+          <span id="theme-icon">☀️</span>
+          <span id="theme-label">Tema oscuro</span>
+        </div>
+        <div class="dropdown-item" id="color-option">
+          <span>🎨 Color:</span>
+          <div class="color-picker-container">
+            <input type="color" id="color-picker" value="#007bff" />
+            <button id="apply-color-btn">Aplicar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./renderer.js" type="module"></script>
+</body>
+</html>

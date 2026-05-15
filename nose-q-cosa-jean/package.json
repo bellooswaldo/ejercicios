@@ -1,0 +1,17 @@
+{
+  "name": "archivado-plus",
+  "version": "3.0.0",
+  "description": "Modular file explorer application with media viewer and theme customization",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev"
+  },
+  "keywords": ["electron", "file-explorer", "media-viewer", "customizable"],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "electron": "^41.6.1"
+  }
+}

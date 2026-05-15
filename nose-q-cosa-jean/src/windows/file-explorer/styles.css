@@ -1,0 +1,75 @@
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.item {
+  background: var(--item-bg);
+  border-bottom: 1px solid var(--item-border);
+  padding: 8px 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.item:hover {
+  background: var(--item-hover-bg);
+}
+
+.folder {
+  color: var(--folder-color);
+  font-weight: bold;
+}
+
+button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background: var(--button-hover-bg);
+}
+
+textarea {
+  background: var(--textarea-bg);
+  color: var(--text-color);
+  border: 1px solid var(--textarea-border);
+}
+
+.error {
+  background: var(--error-bg);
+  color: var(--error-text);
+  border-left: 4px solid var(--error-border);
+}
+
+h3 {
+  color: var(--text-color);
+}
+
+#search-input {
+  background: var(--textarea-bg);
+  color: var(--text-color);
+  border: 1px solid var(--textarea-border);
+}
+
+#search-input::placeholder {
+  color: var(--text-color);
+  opacity: 0.5;
+}
+
+.dropdown {
+  background: var(--textarea-bg);
+  border: 1px solid var(--item-border);
+}
+
+.dropdown-item {
+  color: var(--text-color);
+}
+
+.dropdown-item:hover {
+  background: var(--item-hover-bg);
+}
