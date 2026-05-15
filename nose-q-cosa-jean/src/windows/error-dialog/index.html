@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Error</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 20px;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body.theme-light {
+      background: #f4f4f4;
+      color: #333333;
+    }
+
+    body.theme-dark {
+      background: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .error-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .error-icon {
+      font-size: 48px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .error {
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    body.theme-light .error {
+      background: #ffe0e0;
+      border-left: 4px solid #ff0000;
+    }
+
+    body.theme-dark .error {
+      background: #4d1a1a;
+      border-left: 4px solid #ff6666;
+    }
+
+    .error-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .error-message {
+      font-size: 14px;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    body.theme-light button {
+      background: #007bff;
+      color: #ffffff;
+    }
+
+    body.theme-light button:hover {
+      background: #0056b3;
+      transform: scale(1.02);
+    }
+
+    body.theme-dark button {
+      background: #4da6ff;
+      color: #1a1a1a;
+    }
+
+    body.theme-dark button:hover {
+      background: #3399ff;
+      transform: scale(1.02);
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="error-icon">⚠️</div>
+    <div class="error" id="error-message">
+      <strong class="error-title" id="error-title"></strong>
+      <div class="error-message" id="error-detail"></div>
+    </div>
+    <div class="button-container">
+      <button onclick="window.close()">Cerrar</button>
+    </div>
+  </div>
+  <script src="./renderer.js"></script>
+</body>
+</html>
